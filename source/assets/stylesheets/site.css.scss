@@ -5,10 +5,11 @@
 @import "bootstrap";
 
 
-
-@import 'site/media';
-@import 'site/header';
 @import 'site/footer';
+@import 'site/header';
+@import 'site/headlines';
+@import 'site/media';
+@import 'site/text';
 
 
 @import 'pages/homepage';

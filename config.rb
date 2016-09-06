@@ -23,7 +23,7 @@ end
 # Page options, layouts, aliases and proxies
 ###
 
-set :layout, :page
+set :layout, :page_layout
 # Per-page layout changes:
 # With no layout
 page '/*.xml', layout: false
