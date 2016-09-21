@@ -1,0 +1,23 @@
+---
+title: Full Index
+description: All the tutorials listed as a table
+---
+
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis doloribus numquam delectus aliquid similique nobis aperiam sequi voluptatibus obcaecati unde quos possimus omnis nihil maiores, voluptas alias iusto ratione, eum.</p>
+
+
+
+<% curriculums.each do |c| %>
+    <div class="curriculum">
+        <h6><%=link_to c.data.title, c.url %></h6>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th>Title</th>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+<% end %>

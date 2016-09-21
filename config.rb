@@ -38,9 +38,20 @@ set :images_dir, 'assets/images'
 ###
 # Helpers
 ###
-#
+
+# require 'helpers/lesson_helpers'#
 # require 'helpers/media_helpers'
+# require 'helpers/meta_helpers'
+# require 'helpers/page_meta_helpers'
+# require 'helpers/site_config_helpers'
+
+# helpers LessonHelpers
 # helpers MediaHelpers
+# helpers MetaHelpers
+# helpers PageMetaHelpers
+# helpers SiteConfigHelpers
+
+
 
 # Methods defined in the helpers block are available in templates
 # helpers do

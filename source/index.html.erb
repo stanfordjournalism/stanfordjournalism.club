@@ -3,19 +3,35 @@ title: Stanford Journalism Homepage
 layout: /layouts/homepage_layout
 ---
 
-<div class="container">
-
-      <h1>Content</h1>
-      <p>
-        Content is awesome. Data is awesome.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
 
 
-    <p>
-        <a href="/testpage">testpage</a>
-    </p>
+<section>
+  <div class="container">
+        <h1>Content</h1>
+        <p>
+          Content is awesome. Data is awesome.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
 
-</div>
+
+      <p><a href="/testpage">testpage</a></p>
+
+      <h3><a href="/full-index">Full Index</a></h3>
+
+  </div>
+</section>
+
+
+<section id="curriculums" class="sec">
+  <div class="container">
+    <h2 class="section-title">Curriculums</h2>
+    <%- curriculums.each do |c| %>
+      <div class="curriculum">
+        <div class="title"><%=link_to c.data.title, c.url %></div>
+        <div class="description"><%=c.data.description%></div>
+      </div>
+    <%- end %>
+  </div>
+</section>
