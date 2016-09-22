@@ -10,7 +10,7 @@ description: All the tutorials listed as a table
 
 <% curriculums.each do |c| %>
     <div class="curriculum">
-        <h6><%=link_to c.data.title, c.url %></h6>
+        <h6><%=link_to c.title, c.url %></h6>
         <table class="table">
             <tbody>
                 <tr>
@@ -18,6 +18,5 @@ description: All the tutorials listed as a table
                 </tr>
             </tbody>
         </table>
-
     </div>
 <% end %>

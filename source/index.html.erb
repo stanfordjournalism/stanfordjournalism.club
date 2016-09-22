@@ -29,8 +29,8 @@ layout: /layouts/homepage_layout
     <h2 class="section-title">Curriculums</h2>
     <%- curriculums.each do |c| %>
       <div class="curriculum">
-        <div class="title"><%=link_to c.data.title, c.url %></div>
-        <div class="description"><%=c.data.description%></div>
+        <div class="title"><%=link_to c.title, c.url %></div>
+        <div class="description"><%=c.description%></div>
       </div>
     <%- end %>
   </div>

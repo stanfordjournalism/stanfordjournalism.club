@@ -1,6 +1,8 @@
 # General configuration
 require 'hashie'
 require 'pathname'
+require 'lib/content_resource'
+
 activate :pry
 activate :directory_indexes
 activate :sprockets

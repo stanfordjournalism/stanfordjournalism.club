@@ -1,4 +1,8 @@
 module SiteConfigHelpers
+    def sitemap_resources
+      sitemap.resources
+    end
+
     def site_config
       config[:site_config]
     end
