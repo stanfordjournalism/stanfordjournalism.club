@@ -3,7 +3,7 @@ require 'chronic'
 
 class ContentResource
   attr_reader :title, :description, :date, :url, :path, :source_name,
-    :full_title, :image_url
+    :full_title, :image_url, :dirname
   def friendly_week_date
     @date.strftime("%B %-d")
   end

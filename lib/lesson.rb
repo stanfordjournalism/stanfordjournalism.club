@@ -1,0 +1,2 @@
+class Lesson < MiddlemanContentResource
+end

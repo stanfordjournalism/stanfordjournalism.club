@@ -1,8 +1,8 @@
 class Curriculum < MiddlemanContentResource
-  attr_reader :middleman_resource, :source_file, :ranking
-  def initialize(resource, sitemapresources)
+  attr_reader :middleman_resource, :source_file
+  def initialize(resource)
     super(resource)
-    sitemapresources.select
+    @topics = resource.children.select{|r| r.path =~ /#{@dirname}\/.+?\/index.html/}.map{|r| Topic.new(r)}
   end
 
   def content_size
@@ -11,6 +11,10 @@ class Curriculum < MiddlemanContentResource
 
   def stub?
     content_size < 1024
+  end
+
+  def topics
+    @topics
   end
 
 
@@ -33,3 +37,6 @@ class Curriculum < MiddlemanContentResource
   #   r = self.sitemap_resources.find{|p| p.url == rel_url }
   # end
 end
+
+require 'lib/topic'
+

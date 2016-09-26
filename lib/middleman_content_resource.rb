@@ -1,3 +1,4 @@
+require 'pathname'
 class MiddlemanContentResource < ContentResource
   attr_reader :middleman_resource, :source_file, :ranking
   def initialize(resource)
@@ -5,6 +6,7 @@ class MiddlemanContentResource < ContentResource
     @source_file = resource.source_file
     @url    = resource.url
     @path   = resource.path
+    @dirname = Pathname.new(resource.path).dirname
     @image_url = resource.data.image_url
     @title  = resource.data.title
     # @ranking = resource.data.ranking || 99999

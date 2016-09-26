@@ -31,6 +31,21 @@ layout: /layouts/homepage_layout
       <div class="curriculum">
         <div class="title"><%=link_to c.title, c.url %></div>
         <div class="description"><%=c.description%></div>
+
+          <% c.topics.each do |topic| %>
+            <div class="topic">
+
+              <%= link_to topic.title, topic.url %>
+
+              <% topic.lessons.each do |lesson| %>
+                <div class="lesson">
+                  <%= link_to lesson.title, lesson.url %>
+                </div>
+              <% end %>
+
+            </div>
+          <% end %>
+
       </div>
     <%- end %>
   </div>
